@@ -1,0 +1,2 @@
+## How to contribute
+Just push the solution to exercise number `<n>` in a file called `<n>.tex` into the `solutions/` dir. It would take a couple of minutes for latex to cook the output, which then can be found [here](https://github.com/StructMath/cat-exc/releases/download/build/solutions.pdf).
