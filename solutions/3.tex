@@ -1,0 +1,12 @@
+For any object $A$, we have $id_A ~ id_A = id_A$. So the identity map $id_A$ has an inverse $id_A^{-1} = id_A$ and is an isomorphism.
+
+Suppose $f$ and $g$ are isomorphisms.
+\begin{center}\begin{tikzcd}
+  A \arrow[r, "f", shift left]
+    \arrow[rr, "gf", bend left=45] &
+  B \arrow[r, "g", shift left]
+    \arrow[l, "f^{-1}", shift left] &
+  C \arrow[l, "g^{-1}", shift left]
+    \arrow[ll, "g^{-1} f^{-1}", bend left=50]
+\end{tikzcd}\end{center}
+We have $f^{-1} g^{-1} g f = f^{-1} ~ id_B ~ f = f^{-1} f = id_A$ and $g f f^{-1} g^{-1} = g ~ id_B ~ g^{-1} = g g^{-1} = id_C$. So $gf$ is an isomorphism and $(gf)^{-1} = f^{-1} g^{-1}$,
