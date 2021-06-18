@@ -1,0 +1,10 @@
+\documentclass[a4paper,12pt]{exam}
+\input{preamble}
+\begin{document}
+
+\foreach \c in {1,2,...,\ExcNum}{%
+  \IfFileExists{solutions/\c.tex} {%
+    \exn{\c} \input{solutions/\c.tex}%
+  }%
+}%
+\end{document}
