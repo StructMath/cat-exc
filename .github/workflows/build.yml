@@ -1,0 +1,27 @@
+name: build
+
+on:
+  push:
+    paths:
+    - 'solutions/**'
+jobs:
+  latex-job:
+    runs-on: ubuntu-latest
+    name: Latex Job
+    steps:
+    - uses: actions/checkout@v1
+    - name: Compile
+      uses: vinay0410/tectonic-action@master
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tex_path: 'solutions.tex'
+    - name: Upload PDF
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: solutions.pdf
+        asset_name: solutions.pdf
+        tag: build
+        overwrite: true
+        prerelease: true
