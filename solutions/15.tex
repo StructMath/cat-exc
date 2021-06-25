@@ -1,0 +1,8 @@
+It is trivial that a functor that is injective both on objects and morphisms is monic. For the converse assume that a functor $F:\mathcal{C}\to\mathcal{D}$ is not injective on objects, \emph{i.e.} there are distinct objects $C,C'$ in $\mathcal{C}$ such that $F(C)=F(C')$. It is easy to construct two functors from the discrete category with two objects that show this functor is not monic. Next assume that $F$ is not injective on morphisms, \emph{i.e.} there are distinct morphisms $f,g:C\to C'$ in $\mathcal{C}$ such that $F(f)=F(g)$. It is easy to construct two functors from the category \textbf{2}:
+\[\begin{tikzcd}
+	\bullet &&& \bullet
+	\arrow[from=1-1, to=1-4]
+\end{tikzcd}\]
+that show this functor is not monic.
+
+For the second problem consider the category \textbf{2} and the category $\mathbb{Z}$ with addition presented as a group (this is the free group with one generator). The functor $\hat{1}$ that maps the only nontrivial morphism of \textbf{2} to the morphism $1$ in $\mathbb{Z}$ is epic, though not surjective on morphisms. To see this consider two distinct functors $f,g:\mathbb{Z}\to\mathcal{C}$. These functors must be different in the morphism they assign to $1$ since all other morphisms are determined when this morphism is chosen. Hence for any such $f$ and $g$, $f\circ\hat{1}\neq g\circ\hat{1}$.
