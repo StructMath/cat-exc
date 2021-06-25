@@ -1,0 +1,12 @@
+
+First we will show that the epic maps are surjections, in the mentioned categories.
+Take a surjection $f:A \to B$. Suppose $g \circ f = h \circ f$, that means $g(f(a))=h(f(a))$ for each $a \in A$ and $g,h: B \to C$ in $\bold{Set}$. On the other hand, for each $b \in B$, there is some $a$ such $f(a)=b$, hence $g(b)=g(f(a))=h(f(a))=h(b)$. Note that the same applies to $\bold{Top}$ and $\bold{Ab}$. This implies that each surjection in $\bold{Set}, \bold{Top}, \bold{Ab}$ is epic.
+
+Suppose $f: A \to B$ is not surjective. Take $\bold 2=\{0,1\}$ and let $g$ be the constant zero function and $h$ be zero on $f(A)$ and one on $B \backslash f(A)$, where $\bold 2$ has trivial topology in $\bold{Top}$. This implies that each epic in $\bold{Set}, \bold{Top}$ is surjective.
+
+Suppose $f:A \to B$ in $\bold{Ab}$ is not surjective. As $B$ is and abelian group, $\frac{B}{f(A)}$ is a non-trivial group. Take $g_0:\frac{B}{f(A)} \to C$ as constant zero map and $h_0:\frac{B}{f(A)} \to C$ as non-constant. Let $g = g_0 \circ \pi, h = h_0 \circ \pi$ where $\pi: B \to \frac{B}{f(A)}$ is the natural projection. Now $ g \circ f = h \circ f = 0$ but $0 = g \neq h$. This implies that each epic in $\bold{Ab}$ is surjective.
+
+Then we will show each monic is a injection and vice versa.
+Suppose $f: B \to C$ is injective, then $f(a)=f(b)$ implies that $a=b$, that is, if $f(g(a))=f(h(a))$ then $g(a)=h(a)$, for each $g,h : A \to B$. This implies that injectives are monic in $\bold{Set}, \bold{Top}, \bold{Ab}$.
+
+ If $f$ is not injective and for $a \neq b$ we have $f(a)=f(b)$. If $f$ is a map in $\bold{Set}, \bold{Top}$ take $g,h: \{0\} \to B$ where $g(0)=a,h(0)=b$ and if $f$ is a map in $\bold{Ab}$, then take $g,h: \mathbb{Z} \to B$ such that $g(1)=a,h(1)=b$. Now $f \circ g = f \circ h $ but $g \neq h$, which implies monics are injective in $\bold{Set}, \bold{Top}$ and $\bold{Ab}$.

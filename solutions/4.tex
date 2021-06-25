@@ -1,0 +1,26 @@
+It is trivial that in \textbf{Set} the bijections are isomorphisms. For the converse, assume that for $f:A\to B$ and $g:B\to A$, we have $gf=id_A$ and $fg=id_B$. The morphism $f$ must be surjective. If not there is a $b\in B$ that is not in the range of $f$. Such an $f$ cannot be in the range of $fg$ too, and hence $fg\neq id_B$. It also needs to be injective. If not there are $a,a'\in A$ such that $a\neq a'$ and $f(a)=f(a')$. Then we have $gf(a)=gf(a')$, and hence $gf\neq id_A$.
+
+In a poset the only isomorphisms are the identities, since between any two objects there is at most one morphism. In a monoid any element with an inverse is an isomorphism.
+
+In $\textbf{Set}^\mathcal{C}$, a natural transformation $\alpha:F\Rightarrow G$ is an isomorphism iff for every object $C$ in $\mathcal{C}$, $\alpha_C$ is an isomorphism in \textbf{Set}. For one side, assume that there are $\alpha:F\Rightarrow G$ and $\beta:G\Rightarrow F$ such that $\beta\alpha=id_F$ and $\alpha\beta=id_G$. Clearly $\beta_C\alpha_C=(\beta\alpha)_C=(id_F)_C=id_{F(C)}$ and by similar reasoning $\alpha_C\beta_C=id_{G(C)}$. For the other side assume that for a natural transformation $\alpha:F\Rightarrow G$, for every object $C$ in $\mathcal{C}$, $\alpha_C$ is an isomorphism. Define $\beta:G\Rightarrow F$ by $\beta_C=(\alpha_C)^{-1}$. It is clear that $\beta\alpha=id_F$ and $\alpha\beta=id_G$, so we only need to show that $\beta$ is a natural transformation.
+For that we need to show that the following diagram commutes:
+
+\[\begin{tikzcd}
+	{G(C)} &&& {F(C)} \\
+	\\
+	\\
+	{G(D)} &&& {F(D)}
+	\arrow["{\beta_C=(\alpha_C)^{-1}}", from=1-1, to=1-4]
+	\arrow["{F(f)}", from=1-4, to=4-4]
+	\arrow["{G(f)}"', from=1-1, to=4-1]
+	\arrow["{\beta_D=(\alpha_D)^{-1}}"', from=4-1, to=4-4]
+\end{tikzcd}\]
+
+Let's assume that for some $x\in G(C)$ this diagram does not commute. We will show that this contradits the assumption that the similar diagram for $\alpha$ commutes. For ease of notation let $x'=\beta_C(x)$. We have
+\begin{align*}
+F(f)\beta_C(x)&\neq\beta_DG(f)(x)\\
+\alpha_DF(f)\beta_C(x)&\neq\alpha_D\beta_DG(f)(x)\\
+\alpha_DF(f)\beta_C(x)&\neq G(f)(x)\\
+\alpha_DF(f)\beta_C\alpha_C(x')&\neq G(f)\alpha_C(x')\\
+\alpha_DF(f)(x')&\neq G(f)\alpha_C(x')
+\end{align*}
